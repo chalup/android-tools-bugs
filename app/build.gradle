@@ -1,0 +1,29 @@
+apply plugin: 'com.android.application'
+
+android {
+  compileSdkVersion 23
+  buildToolsVersion "23.0.2"
+
+  defaultConfig {
+    applicationId "org.chalup.androidbugz"
+    minSdkVersion 15
+    targetSdkVersion 23
+    versionCode 1
+    versionName "1.0"
+  }
+  buildTypes {
+    debug {
+      minifyEnabled false
+    }
+    release {
+      minifyEnabled false
+    }
+  }
+  lintOptions {
+    fatal 'CommitPrefEdits'
+  }
+}
+
+dependencies {
+  compile fileTree(dir: 'libs', include: ['*.jar'])
+}
